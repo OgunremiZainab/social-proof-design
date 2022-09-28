@@ -1,0 +1,211 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --magenta: hsl(300, 43%, 22%);
+    --pink: hsl(333, 80%, 67%);
+    --gray-magenta: hsl(303, 10%, 53%);
+    --white-magenta: hsl(300, 24%, 96%);
+}
+
+/* typography and layout */
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--white);
+    font-family: 'League Spartan', sans-serif;
+    background: url(social-proof-images/bg-pattern-top-mobile.svg), url(social-proof-images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
+
+main {
+    width: 85%;
+    max-width: 375px;
+     margin: 5rem auto;
+}
+
+.page-title {
+    color: var(--magenta);
+    text-align: center;
+    font-size: 3rem;
+}
+
+.page-subtitle {
+    color: var(--gray-magenta);
+    text-align: center;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.ratings {
+    text-align: center;
+    background-color: var(--white-magenta);
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+svg {
+    padding-top: 1rem;
+}
+
+.ratings-pg {
+    color: var(--magenta);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    
+}
+
+.ratings:last-of-type {
+    margin-bottom: 3rem;
+}
+
+.userpage {
+    background-color: var(--magenta);
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+img {
+    border-radius: 50%;
+    padding-right: 1.2rem;
+}
+
+.username, .description {
+    color: var(--white-magenta);
+}
+
+.username {
+    margin-bottom: 0.3rem;
+}
+
+.buyer {
+    color: var(--pink);
+    margin-top: 0;
+}
+
+.img-name {
+    display: flex;
+}
+
+.user-buyer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.description {
+    line-height: 1.4rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    
+}
+
+
+/* Media queries */
+
+@media (min-width: 965px) {
+
+    body {
+        background: url(social-proof-images/bg-pattern-top-desktop.svg), url(social-proof-images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+    }
+
+    main {
+        width: 80%;
+        max-width: 800px;
+    }
+
+    .page-heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title-container {
+        width: 35%;
+    }
+
+    .page-title {
+        font-size: 2.3rem;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 0.9rem;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .ratings-container {
+        width: 50%;
+        margin-top: 3rem;
+    }
+    
+
+    .ratings {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 0;
+    }
+
+    .ratings-pg {
+        font-size: 1rem;
+        padding-bottom: 0;
+    }
+
+    .ratings:nth-of-type(1) {
+        z-index: 1;
+    }
+
+
+    .ratings:nth-of-type(2) {
+        margin-left: 5%;
+        margin-right: auto;
+        z-index: 3;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .ratings:nth-of-type(3) {
+        margin-left: 8.7%;
+        z-index: 5;
+    }
+
+
+    .user-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;  
+    }
+
+
+    .userpage:nth-of-type(1) {
+        margin-bottom: 4rem;
+    }
+
+    .userpage:nth-of-type(2) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .userpage:nth-of-type(3) {
+        margin-top: 4rem;
+    }
+
+}
